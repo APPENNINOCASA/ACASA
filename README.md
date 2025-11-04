@@ -43,8 +43,7 @@ Appinapp è una piattaforma web moderna per la gestione e pubblicazione di immob
 
 ## Installazione Locale
 
-```bash
-git clone https://github.com/APPENNINOCASA/Appinapp.git
-cd Appinapp
-npm install
-npm run dev
+```markdown
+## Sviluppo
+
+Il progetto è sviluppato direttamente su GitHub e deployato automaticamente su Vercel ad ogni commit.
