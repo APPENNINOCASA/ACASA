@@ -1,0 +1,248 @@
+.my-properties-container {
+  min-height: 100vh;
+  background: #f5f7fa;
+  padding: 40px 20px;
+}
+
+.properties-header {
+  max-width: 1200px;
+  margin: 0 auto 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.properties-header h1 {
+  color: #333;
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.btn-back {
+  background: white;
+  color: #667eea;
+  padding: 10px 20px;
+  border: 2px solid #667eea;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-back:hover {
+  background: #667eea;
+  color: white;
+}
+
+.btn-add {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-add:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-size: 1.5rem;
+  color: #667eea;
+}
+
+.empty-state {
+  max-width: 500px;
+  margin: 80px auto;
+  text-align: center;
+  background: white;
+  padding: 60px 40px;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.empty-icon {
+  font-size: 5rem;
+  margin-bottom: 20px;
+}
+
+.empty-state h2 {
+  color: #333;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.empty-state p {
+  color: #666;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+.btn-empty {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 14px 30px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.btn-empty:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+}
+
+.properties-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 25px;
+}
+
+.property-card {
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.property-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.property-status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.status-badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.status-badge.published {
+  background: #d4edda;
+  color: #155724;
+}
+
+.status-badge.draft {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.status-type {
+  padding: 6px 12px;
+  background: #e9ecef;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  color: #495057;
+  text-transform: capitalize;
+}
+
+.property-card h3 {
+  color: #333;
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.property-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.info-item {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.property-details {
+  display: flex;
+  gap: 15px;
+  padding: 15px 0;
+  border-top: 1px solid #e9ecef;
+  border-bottom: 1px solid #e9ecef;
+  margin-bottom: 20px;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.property-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-action {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.btn-action.publish {
+  background: #28a745;
+  color: white;
+}
+
+.btn-action.publish:hover {
+  background: #218838;
+}
+
+.btn-action.edit {
+  background: #667eea;
+  color: white;
+}
+
+.btn-action.edit:hover {
+  background: #5568d3;
+}
+
+.btn-action.delete {
+  background: #dc3545;
+  color: white;
+}
+
+.btn-action.delete:hover {
+  background: #c82333;
+}
+
+@media (max-width: 768px) {
+  .properties-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .properties-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .property-actions {
+    flex-direction: column;
+  }
+}
