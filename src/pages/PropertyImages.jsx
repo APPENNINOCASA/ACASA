@@ -90,8 +90,21 @@ function PropertyImages() {
   }
 
   if (loading) {
-    return <div className="loading">Caricamento...</div>
-  }
+  return <div className="loading">Caricamento...</div>
+}
+
+if (!property) {
+  return (
+    <div className="loading">
+      Immobile non trovato
+      <br />
+      <button onClick={() => navigate('/my-properties')} style={{marginTop: '20px'}}>
+        Torna agli immobili
+      </button>
+    </div>
+  )
+}
+
 
   return (
     <div className="property-images-container">
