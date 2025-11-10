@@ -6,6 +6,7 @@ import Dashboard from './pages/Dashboard'
 import AddProperty from './pages/AddProperty'
 import MyProperties from './pages/MyProperties'
 import PropertyImages from './pages/PropertyImages'
+import Home from './pages/Home'
 import './App.css'
 
 function ProtectedRoute({ children }) {
@@ -33,7 +34,7 @@ function App() {
     <Router>
       <AuthProvider>
         <Routes>
-          <Route path="/" element={<Navigate to="/login" />} />
+          <Route path="/" element={<Home />} />
           <Route path="/login" element={
             <PublicRoute>
               <Login />
