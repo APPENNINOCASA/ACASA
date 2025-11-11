@@ -1,4 +1,3 @@
-import PropertyDetail from './pages/PropertyDetail'
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
 import { AuthProvider, useAuth } from './contexts/AuthContext'
 import Login from './pages/Login'
@@ -8,6 +7,7 @@ import AddProperty from './pages/AddProperty'
 import MyProperties from './pages/MyProperties'
 import PropertyImages from './pages/PropertyImages'
 import Home from './pages/Home'
+import PropertyDetail from './pages/PropertyDetail'
 import './App.css'
 
 function ProtectedRoute({ children }) {
@@ -66,6 +66,7 @@ function App() {
               <PropertyImages />
             </ProtectedRoute>
           } />
+          <Route path="/property/:id" element={<PropertyDetail />} />
         </Routes>
       </AuthProvider>
     </Router>
