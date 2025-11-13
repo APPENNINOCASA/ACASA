@@ -82,6 +82,8 @@
   border-radius: 10px;
   font-size: 1rem;
   font-family: inherit;
+  background-color: #ffffff; /* sfondo chiaro */
+  color: #333333; /* testo nero */
   transition: all 0.3s ease;
 }
 
