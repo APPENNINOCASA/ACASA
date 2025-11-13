@@ -115,20 +115,20 @@ function AddProperty() {
             </div>
 
             <div className="form-group">
-              <label htmlFor="price_type">Tipo Prezzo *</label>
-              <select
-                id="price_type"
-                name="price_type"
-                value={formData.price_type}
-                onChange={handleChange}
-                required
-              >
-                <option value="vendita">Vendita</option>
-                <option value="affitto_mensile">Affitto Mensile</option>
-                <option value="affitto_giornaliero">Affitto Giornaliero</option>
-              </select>
-            </div>
-          </div>
+  <label htmlFor="price_type">Tipologia *</label>
+  <select
+    id="price_type"
+    name="price_type"
+    value={formData.price_type}
+    onChange={handleChange}
+    required
+  >
+    <option value="vendita">Vendita</option>
+    <option value="affitto_giornaliero">Affitto Breve</option>
+    <option value="affitto_mensile">Affitto Classico</option>
+  </select>
+</div>
+
 
           <div className="form-row">
             <div className="form-group">
